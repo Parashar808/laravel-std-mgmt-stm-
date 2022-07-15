@@ -30,3 +30,5 @@ Route::post('student','StudentController@store')
 Route::resource('faculty', 'FacultyController');
 
 Route::resource('semester', 'SemesterController');
+
+Route::resource('batch', 'batchController');
