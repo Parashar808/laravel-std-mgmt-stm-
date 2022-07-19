@@ -1,6 +1,6 @@
 @extends('welcome')
 @section('main_content')
-<div class="col-md-6">
+<div class="col-md-12">
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Simple Full Width Table</h3>
@@ -23,7 +23,11 @@
                       <th style="width: 10px">#</th>
                       <th>Name</th>
                       <th>Email</th>
-                      <th style="width: 40px">Action</th>
+                      <th>DOB</th>
+                      <th>Mobile</th> 
+                      <th>Action</th>
+                      <th>IS ACTIVE</th>
+                      
                     </tr>
                   </thead>
                   <tbody>
@@ -31,7 +35,30 @@
                  <tr>
                     <td>{{ $student->id }}</td>
                     <td>{{ $student->name }}</td>
-                    <td>{{ $student->email }}</td>  
+                    <td>{{ $student->email }}</td>
+                    <td>{{$student->dob}}</td>  
+                    <td>{{$student->mobile}}</td>  
+                    <!-- <td>{{$student->is_active}}</td>   -->
+
+
+
+                    
+                    <td style="display:flex;">
+                      <a href = "{{ route('student.edit',$student->id)  }}"
+                      class= "btn btn-warning btn-sm"
+                      >
+                        Edit</a>
+
+                        |
+                        <form method="POST" action="{{ route('student.destroy',$student->id) }}">
+                          @method('DELETE')
+                          @csrf
+
+                          <button type="submit" class="btn btn-sm btn-danger"> Delete</button>
+                        </form>
+
+
+</td>
 </tr>
 
                  @endforeach

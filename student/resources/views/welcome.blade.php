@@ -213,27 +213,27 @@
                         <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
-                                Dashboard
+                                Administrator
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link active">
+                                <a href="{{ route('student.index') }}" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Dashboard v1</p>
+                                    <p>Students</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('student.index') }}" class="nav-link">
+                                <a href="{{ route('faculty.index') }}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Student</p>
+                                    <p>Faculties</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index3.html" class="nav-link">
+                                <a href="{{ route('semester.index') }}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Dashboard v3</p>
+                                    <p>Semesters</p>
                                 </a>
                             </li>
                         </ul>
